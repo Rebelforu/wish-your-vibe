@@ -42,12 +42,12 @@ export const NameInput = ({ onNameSubmit }: NameInputProps) => {
       </div>
 
       {/* Main content */}
-      <div className="glass-card rounded-3xl p-12 max-w-2xl w-full mx-4 text-center animate-bounce-in">
+      <div className="glass-card neon-border rounded-3xl mobile-card max-w-2xl w-full mobile-spacing text-center animate-bounce-in">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-7xl font-black party-text mb-4">
+          <h1 className="mobile-hero font-black party-text mb-4 animate-text-glow">
             🎉 Birthday Magic 🎉
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">
             Enter your name to unlock your personalized birthday celebration!
           </p>
         </div>
@@ -59,16 +59,16 @@ export const NameInput = ({ onNameSubmit }: NameInputProps) => {
               placeholder="What's your name?"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="h-16 text-2xl text-center rounded-2xl border-2 glass-card placeholder:text-muted-foreground/60 focus:ring-4 focus:ring-primary/30 transition-all duration-300"
+              className="mobile-button text-xl sm:text-2xl text-center rounded-2xl border-2 glass-card neon-border placeholder:text-muted-foreground/60 focus:ring-4 focus:ring-primary/30 transition-all duration-300 animate-neon-pulse"
               disabled={isLoading}
             />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-20 pointer-events-none" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-neon opacity-10 pointer-events-none animate-shimmer" />
           </div>
 
           <Button
             type="submit"
             disabled={!name.trim() || isLoading}
-            className="btn-celebration h-16 px-12 text-xl font-bold rounded-2xl w-full md:w-auto animate-pulse-glow"
+            className="btn-celebration mobile-button px-8 sm:px-12 font-bold rounded-2xl w-full md:w-auto animate-pulse-glow"
           >
             {isLoading ? (
               <>

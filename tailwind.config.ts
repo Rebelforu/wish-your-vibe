@@ -70,6 +70,10 @@ export default {
 					yellow: 'hsl(var(--celebration-yellow))',
 					green: 'hsl(var(--celebration-green))',
 					orange: 'hsl(var(--celebration-orange))',
+					cyan: 'hsl(var(--celebration-cyan))',
+					magenta: 'hsl(var(--celebration-magenta))',
+					lime: 'hsl(var(--celebration-lime))',
+					coral: 'hsl(var(--celebration-coral))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -148,10 +152,18 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'confetti': 'confetti 3s linear infinite',
+				'confetti': 'confetti 4s linear infinite',
 				'float': 'float 6s ease-in-out infinite',
-				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'float-rotate': 'floatRotate 12s linear infinite',
+				'bounce-in': 'bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'shimmer': 'shimmer 3s infinite',
+				'button-dance': 'buttonDance 0.6s ease',
+				'particle-float': 'particleFloat 6s linear infinite',
+				'neon-pulse': 'neonPulse 2s ease-in-out infinite',
+				'heart-beat': 'heartBeat 1s ease-in-out',
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'text-glow': 'textGlow 3s ease-in-out infinite'
 			}
 		}
 	},

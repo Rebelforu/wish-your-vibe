@@ -6,6 +6,8 @@ interface ConfettiPiece {
   color: string;
   delay: number;
   size: number;
+  shape: 'circle' | 'square' | 'triangle';
+  duration: number;
 }
 
 export const ConfettiAnimation = ({ isActive }: { isActive: boolean }) => {
@@ -17,17 +19,25 @@ export const ConfettiAnimation = ({ isActive }: { isActive: boolean }) => {
         'hsl(var(--celebration-pink))',
         'hsl(var(--celebration-purple))',
         'hsl(var(--celebration-blue))',
+        'hsl(var(--celebration-cyan))',
         'hsl(var(--celebration-yellow))',
-        'hsl(var(--celebration-green))',
-        'hsl(var(--celebration-orange))'
+        'hsl(var(--celebration-lime))',
+        'hsl(var(--celebration-magenta))',
+        'hsl(var(--celebration-coral))',
+        'hsl(var(--celebration-orange))',
+        'hsl(var(--celebration-green))'
       ];
 
-      const newConfetti = Array.from({ length: 50 }, (_, i) => ({
+      const shapes: ('circle' | 'square' | 'triangle')[] = ['circle', 'square', 'triangle'];
+
+      const newConfetti = Array.from({ length: 80 }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
         color: colors[Math.floor(Math.random() * colors.length)],
-        delay: Math.random() * 3,
-        size: Math.random() * 8 + 4
+        delay: Math.random() * 2,
+        size: Math.random() * 12 + 6,
+        shape: shapes[Math.floor(Math.random() * shapes.length)],
+        duration: Math.random() * 2 + 3
       }));
 
       setConfetti(newConfetti);
@@ -35,7 +45,7 @@ export const ConfettiAnimation = ({ isActive }: { isActive: boolean }) => {
       // Clear confetti after animation
       const timer = setTimeout(() => {
         setConfetti([]);
-      }, 6000);
+      }, 8000);
 
       return () => clearTimeout(timer);
     }
@@ -48,13 +58,19 @@ export const ConfettiAnimation = ({ isActive }: { isActive: boolean }) => {
       {confetti.map((piece) => (
         <div
           key={piece.id}
-          className="absolute animate-confetti"
+          className={`absolute animate-confetti ${
+            piece.shape === 'circle' ? 'rounded-full' : 
+            piece.shape === 'triangle' ? 'triangle' : 'rounded-sm'
+          }`}
           style={{
             left: `${piece.left}%`,
             animationDelay: `${piece.delay}s`,
+            animationDuration: `${piece.duration}s`,
             backgroundColor: piece.color,
             width: `${piece.size}px`,
             height: `${piece.size}px`,
+            boxShadow: `0 0 ${piece.size}px ${piece.color}50`,
+            clipPath: piece.shape === 'triangle' ? 'polygon(50% 0%, 0% 100%, 100% 100%)' : undefined
           }}
         />
       ))}
