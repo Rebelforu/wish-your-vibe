@@ -52,6 +52,28 @@ export const WishCard = ({ wish, gradient, icon, delay = 0 }: WishCardProps) => 
 };
 
 export const generateWishes = (name: string) => [
+  // Special Abdullah quotes
+  {
+    wish: `Dear Abdullah, on your special day, I want you to know how grateful I am to have you as a friend! 🎂 Your kindness, loyalty, and amazing personality make every day brighter. Happy Birthday buddy!`,
+    gradient: "bg-gradient-primary",
+    icon: <Heart className="w-8 h-8 text-celebration-pink" />
+  },
+  {
+    wish: `Abdullah, you're not just a friend, you're family! ✨ May this birthday mark the beginning of your most incredible year yet, filled with success, happiness, and all your dreams coming true!`,
+    gradient: "bg-gradient-secondary", 
+    icon: <Sparkles className="w-8 h-8 text-celebration-purple" />
+  },
+  {
+    wish: `Happy Birthday Abdullah! 🎉 Your friendship means the world to me. May your special day be as awesome as you are, and may this new year bring you endless joy and unforgettable adventures!`,
+    gradient: "bg-gradient-accent",
+    icon: <Gift className="w-8 h-8 text-celebration-green" />
+  },
+  {
+    wish: `Abdullah, another year of being absolutely amazing! 🌟 Your positive energy and genuine heart inspire everyone around you. Here's to celebrating YOU and all the wonderful things you bring to this world!`,
+    gradient: "bg-gradient-neon",
+    icon: <Star className="w-8 h-8 text-celebration-yellow" />
+  },
+  // General birthday wishes
   {
     wish: `Happy Birthday ${name}! 🎂 May your special day be filled with endless joy, laughter, and all your favorite things. You deserve all the happiness in the world!`,
     gradient: "bg-gradient-primary",

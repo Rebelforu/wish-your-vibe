@@ -88,7 +88,7 @@ export const CelebrationPage = ({ name, onBack }: CelebrationPageProps) => {
           <h1 className="mobile-hero font-black party-text mb-4 animate-bounce-in animate-text-glow">
             Happy Birthday {name}! 🎂
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl text-foreground font-medium mb-8 opacity-80">
             Your personalized birthday celebration awaits! ✨
           </p>
 
@@ -145,10 +145,17 @@ export const CelebrationPage = ({ name, onBack }: CelebrationPageProps) => {
             <h2 className="text-2xl sm:text-3xl font-bold party-text mb-4 animate-text-glow">
               🌟 You're Absolutely Amazing! 🌟
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-foreground mb-6">
               {name}, we hope your special day is filled with love, laughter, and all your heart desires. 
               You deserve every bit of happiness and more! Keep shining bright! ✨
             </p>
+            
+            {/* Developer Credit */}
+            <div className="border-t border-muted pt-4">
+              <p className="text-sm text-muted-foreground font-medium">
+                💻 Developed with ❤️ by Zubair
+              </p>
+            </div>
           </div>
         </div>
       </div>
