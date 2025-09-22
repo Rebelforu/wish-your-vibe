@@ -8,26 +8,26 @@
 @layer base {
   :root {
     /* Ultra Vibrant Color Palette - Mobile Optimized */
-    --background: 240 100% 2%;
-    --foreground: 0 0% 100%;
+    --background: 250 25% 8%;
+    --foreground: 250 8% 95%;
 
-    --card: 260 60% 6%;
-    --card-foreground: 0 0% 100%;
+    --card: 250 25% 12%;
+    --card-foreground: 250 8% 95%;
 
-    --popover: 260 60% 6%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 250 25% 12%;
+    --popover-foreground: 250 8% 95%;
 
-    --primary: 280 100% 75%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 280 60% 75%;
+    --primary-foreground: 260 25% 15%;
 
-    --secondary: 200 100% 75%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 55% 78%;
+    --secondary-foreground: 220 25% 20%;
 
-    --muted: 260 40% 12%;
-    --muted-foreground: 240 10% 70%;
+    --muted: 260 20% 20%;
+    --muted-foreground: 240 15% 65%;
 
-    --accent: 320 100% 80%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 340 55% 82%;
+    --accent-foreground: 340 25% 20%;
 
     --success: 120 100% 65%;
     --success-foreground: 0 0% 100%;
@@ -44,59 +44,46 @@
 
     --radius: 1.25rem;
 
-    /* Ultra Catchy Birthday Colors */
-    --celebration-pink: 330 100% 80%;
-    --celebration-purple: 280 100% 75%;
-    --celebration-blue: 200 100% 75%;
-    --celebration-yellow: 50 100% 70%;
-    --celebration-green: 120 100% 65%;
-    --celebration-orange: 20 100% 70%;
-    --celebration-cyan: 180 100% 70%;
-    --celebration-magenta: 300 100% 80%;
-    --celebration-lime: 80 100% 65%;
-    --celebration-coral: 15 100% 75%;
+    /* Professional Pastel Birthday Colors */
+    --celebration-pink: 340 65% 85%;
+    --celebration-purple: 280 60% 80%;
+    --celebration-blue: 220 70% 82%;
+    --celebration-yellow: 45 85% 88%;
+    --celebration-green: 140 50% 78%;
+    --celebration-orange: 25 75% 85%;
+    --celebration-cyan: 190 60% 82%;
+    --celebration-magenta: 320 55% 80%;
+    --celebration-lime: 80 60% 80%;
+    --celebration-coral: 15 70% 82%;
 
-    /* Mind-Blowing Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--celebration-purple)), hsl(var(--celebration-pink)), hsl(var(--celebration-magenta)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--celebration-blue)), hsl(var(--celebration-cyan)), hsl(var(--celebration-purple)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--celebration-pink)), hsl(var(--celebration-coral)), hsl(var(--celebration-orange)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--celebration-green)), hsl(var(--celebration-lime)), hsl(var(--celebration-blue)));
-    --gradient-party: linear-gradient(45deg, 
+    /* Professional Elegant Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--celebration-purple)), hsl(var(--celebration-pink)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--celebration-blue)), hsl(var(--celebration-cyan)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--celebration-pink)), hsl(var(--celebration-coral)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--celebration-green)), hsl(var(--celebration-lime)));
+    --gradient-party: linear-gradient(120deg, 
       hsl(var(--celebration-pink)), 
       hsl(var(--celebration-purple)), 
-      hsl(var(--celebration-blue)), 
-      hsl(var(--celebration-cyan)),
-      hsl(var(--celebration-yellow)), 
-      hsl(var(--celebration-green)),
-      hsl(var(--celebration-magenta)),
-      hsl(var(--celebration-coral))
+      hsl(var(--celebration-blue))
     );
-    --gradient-rainbow: conic-gradient(from 0deg,
+    --gradient-rainbow: linear-gradient(45deg,
       hsl(var(--celebration-pink)),
-      hsl(var(--celebration-orange)),
-      hsl(var(--celebration-yellow)),
-      hsl(var(--celebration-lime)),
-      hsl(var(--celebration-green)),
-      hsl(var(--celebration-cyan)),
-      hsl(var(--celebration-blue)),
       hsl(var(--celebration-purple)),
-      hsl(var(--celebration-magenta)),
-      hsl(var(--celebration-pink))
+      hsl(var(--celebration-blue)),
+      hsl(var(--celebration-cyan))
     );
     --gradient-neon: linear-gradient(45deg, 
       hsl(var(--celebration-cyan)) 0%,
-      hsl(var(--celebration-magenta)) 25%,
-      hsl(var(--celebration-yellow)) 50%,
-      hsl(var(--celebration-pink)) 75%,
-      hsl(var(--celebration-blue)) 100%
+      hsl(var(--celebration-purple)) 50%,
+      hsl(var(--celebration-pink)) 100%
     );
 
-    /* Advanced Glassmorphism Effects */
-    --glass-bg: hsla(260, 60%, 8%, 0.15);
-    --glass-border: hsla(280, 100%, 75%, 0.2);
-    --glass-shadow: 0 12px 40px hsla(260, 100%, 2%, 0.4);
-    --glass-glow: 0 0 30px hsla(var(--celebration-purple), 0.3);
-    --neon-glow: 0 0 20px hsla(var(--celebration-cyan), 0.6), 0 0 40px hsla(var(--celebration-pink), 0.4);
+    /* Refined Glass Effects */
+    --glass-bg: hsla(250, 25%, 8%, 0.25);
+    --glass-border: hsla(280, 60%, 75%, 0.15);
+    --glass-shadow: 0 8px 32px hsla(250, 25%, 5%, 0.3);
+    --glass-glow: 0 0 20px hsla(var(--celebration-purple), 0.15);
+    --neon-glow: 0 0 15px hsla(var(--celebration-cyan), 0.3), 0 0 30px hsla(var(--celebration-pink), 0.2);
 
     /* Ultra Smooth Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,11 +152,16 @@
     @apply border-border;
   }
 
-  body {
+    body {
     @apply bg-background text-foreground font-poppins;
-    background: var(--gradient-party);
-    background-size: 800% 800%;
-    animation: gradientShift 20s ease infinite, bodyPulse 8s ease-in-out infinite;
+    background: linear-gradient(-45deg, 
+      hsl(250 25% 8%), 
+      hsl(260 30% 10%), 
+      hsl(280 25% 12%), 
+      hsl(270 20% 9%)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 25s ease infinite;
     overflow-x: hidden;
   }
 }
